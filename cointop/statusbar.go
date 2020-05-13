@@ -3,8 +3,8 @@ package cointop
 import (
 	"fmt"
 
-	"github.com/miguelmota/cointop/cointop/common/open"
-	"github.com/miguelmota/cointop/cointop/common/pad"
+	"github.com/cdyfng/coind/cointop/common/open"
+	"github.com/cdyfng/coind/cointop/common/pad"
 )
 
 // StatusbarView is structure for statusbar view

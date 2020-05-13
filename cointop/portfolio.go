@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/miguelmota/cointop/cointop/common/pad"
+	"github.com/cdyfng/coind/cointop/common/pad"
 )
 
 // PortfolioUpdateMenuView is structure for portfolio update menu view

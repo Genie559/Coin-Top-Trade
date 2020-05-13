@@ -4,7 +4,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/miguelmota/cointop/cointop/common/levenshtein"
+	"github.com/cdyfng/coind/cointop/common/levenshtein"
 )
 
 // SearchFieldView is structure for search field view

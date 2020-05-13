@@ -7,10 +7,10 @@ import (
 	"strings"
 	"time"
 
-	gecko "github.com/miguelmota/cointop/cointop/api/coingecko/v3"
-	geckoTypes "github.com/miguelmota/cointop/cointop/api/coingecko/v3/types"
-	apitypes "github.com/miguelmota/cointop/cointop/common/api/types"
-	util "github.com/miguelmota/cointop/cointop/common/api/util"
+	gecko "github.com/cdyfng/coind/cointop/api/coingecko/v3"
+	geckoTypes "github.com/cdyfng/coind/cointop/api/coingecko/v3/types"
+	apitypes "github.com/cdyfng/coind/cointop/common/api/types"
+	util "github.com/cdyfng/coind/cointop/common/api/util"
 )
 
 // ErrPingFailed is the error for when pinging the API fails
@@ -48,7 +48,7 @@ func (s *Service) getLimitedCoinData(convert string, offset int) ([]apitypes.Coi
 	page := offset
 	sparkline := false
 	pcp := geckoTypes.PriceChangePercentageObject
-	priceChangePercentage := []string{pcp.PCP1h, pcp.PCP24h, pcp.PCP7d}
+	priceChangePercentage := []string{pcp.PCP1h, pcp.PCP24h, pcp.PCP7d, pcp.PCP30d, pcp.PCP1y}
 	order := geckoTypes.OrderTypeObject.MarketCapDesc
 	convertTo := strings.ToLower(convert)
 	if convertTo == "" {
@@ -71,6 +71,8 @@ func (s *Service) getLimitedCoinData(convert string, offset int) ([]apitypes.Coi
 			var percentChange1H float64
 			var percentChange24H float64
 			var percentChange7D float64
+			var percentChange30D float64
+			var percentChange1Y float64
 
 			if item.PriceChangePercentage1hInCurrency != nil {
 				percentChange1H = *item.PriceChangePercentage1hInCurrency
@@ -82,6 +84,14 @@ func (s *Service) getLimitedCoinData(convert string, offset int) ([]apitypes.Coi
 
 			if item.PriceChangePercentage7dInCurrency != nil {
 				percentChange7D = *item.PriceChangePercentage7dInCurrency
+			}
+
+			if item.PriceChangePercentage30dInCurrency != nil {
+				percentChange30D = *item.PriceChangePercentage30dInCurrency
+			}
+
+			if item.PriceChangePercentage1yInCurrency != nil {
+				percentChange1Y = *item.PriceChangePercentage1yInCurrency
 			}
 
 			availableSupply := item.CirculatingSupply
@@ -102,6 +112,8 @@ func (s *Service) getLimitedCoinData(convert string, offset int) ([]apitypes.Coi
 				PercentChange1H:  util.FormatPercentChange(percentChange1H),
 				PercentChange24H: util.FormatPercentChange(percentChange24H),
 				PercentChange7D:  util.FormatPercentChange(percentChange7D),
+				PercentChange30D: util.FormatPercentChange(percentChange30D),
+				PercentChange1Y:  util.FormatPercentChange(percentChange1Y),
 				Volume24H:        util.FormatVolume(item.TotalVolume),
 				LastUpdated:      util.FormatLastUpdated(item.LastUpdated),
 			})

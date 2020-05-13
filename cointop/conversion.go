@@ -5,8 +5,8 @@ import (
 	"sort"
 	"strings"
 
-	color "github.com/miguelmota/cointop/cointop/common/color"
-	"github.com/miguelmota/cointop/cointop/common/pad"
+	color "github.com/cdyfng/coind/cointop/common/color"
+	"github.com/cdyfng/coind/cointop/common/pad"
 )
 
 // keep these in alphabetical order

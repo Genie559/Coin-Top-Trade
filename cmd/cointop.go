@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"github.com/miguelmota/cointop/cointop"
+	"github.com/cdyfng/coind/cointop"
 	"github.com/spf13/cobra"
 )
 
@@ -24,7 +24,7 @@ func Execute() {
 
 Cointop is a fast and lightweight interactive terminal based UI application for tracking and monitoring cryptocurrency coin stats in real-time.
 
-For more information, visit: https://github.com/miguelmota/cointop`,
+For more information, visit: https://github.com/cdyfng/coind`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if version {
 				cointop.PrintVersion()

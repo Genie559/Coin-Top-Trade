@@ -1,4 +1,4 @@
-module github.com/miguelmota/cointop
+module github.com/cdyfng/coind
 
 require (
 	github.com/BurntSushi/toml v0.3.1

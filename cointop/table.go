@@ -8,9 +8,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/miguelmota/cointop/cointop/common/humanize"
-	"github.com/miguelmota/cointop/cointop/common/pad"
-	"github.com/miguelmota/cointop/cointop/common/table"
+	"github.com/cdyfng/coind/cointop/common/humanize"
+	"github.com/cdyfng/coind/cointop/common/pad"
+	"github.com/cdyfng/coind/cointop/common/table"
 )
 
 // TableView is structure for table view
@@ -36,6 +36,8 @@ func TableColumnOrder() []string {
 		"24hvolume",
 		"1hchange",
 		"7dchange",
+		"1dchange",
+		"1ychange",		
 		"totalsupply",
 		"availablesupply",
 		"percentholdings",
@@ -122,6 +124,8 @@ func (ct *Cointop) RefreshTable() error {
 		ct.table.AddCol("")
 		ct.table.AddCol("")
 		ct.table.AddCol("")
+		ct.table.AddCol("")
+		ct.table.AddCol("")		
 		for _, coin := range ct.State.coins {
 			if coin == nil {
 				continue
@@ -132,6 +136,8 @@ func (ct *Cointop) RefreshTable() error {
 			color1h := ct.colorscheme.TableColumnChange
 			color24h := ct.colorscheme.TableColumnChange
 			color7d := ct.colorscheme.TableColumnChange
+			color30d := ct.colorscheme.TableColumnChange
+			color1y := ct.colorscheme.TableColumnChange			
 			if coin.Favorite {
 				namecolor = ct.colorscheme.TableRowFavorite
 			}
@@ -153,6 +159,18 @@ func (ct *Cointop) RefreshTable() error {
 			if coin.PercentChange7D < 0 {
 				color7d = ct.colorscheme.TableColumnChangeDown
 			}
+			if coin.PercentChange30D > 0 {
+				color30d = ct.colorscheme.TableColumnChangeUp
+			}
+			if coin.PercentChange30D < 0 {
+				color30d = ct.colorscheme.TableColumnChangeDown
+			}		
+			if coin.PercentChange1Y > 0 {
+				color1y = ct.colorscheme.TableColumnChangeUp
+			}
+			if coin.PercentChange1Y < 0 {
+				color1y = ct.colorscheme.TableColumnChangeDown
+			}							
 			name := coin.Name
 			star := ct.colorscheme.TableRow(" ")
 			if coin.Favorite {
@@ -179,6 +197,8 @@ func (ct *Cointop) RefreshTable() error {
 				color1h(fmt.Sprintf("%8.2f%%", coin.PercentChange1H)),
 				color24h(fmt.Sprintf("%8.2f%%", coin.PercentChange24H)),
 				color7d(fmt.Sprintf("%8.2f%%", coin.PercentChange7D)),
+				color30d(fmt.Sprintf("%8.2f%%", coin.PercentChange30D)),
+				color1y(fmt.Sprintf("%8.2f%%", coin.PercentChange1Y)),
 				ct.colorscheme.TableRow(fmt.Sprintf("%21s", humanize.Commaf(coin.TotalSupply))),
 				ct.colorscheme.TableRow(fmt.Sprintf("%18s", humanize.Commaf(coin.AvailableSupply))),
 				ct.colorscheme.TableRow(fmt.Sprintf("%18s", lastUpdated)),

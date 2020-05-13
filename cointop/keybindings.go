@@ -265,6 +265,10 @@ func (ct *Cointop) keybindings(g *gocui.Gui) error {
 			fn = ct.sortfn("24hchange", true)
 		case "sort_column_7d_change":
 			fn = ct.sortfn("7dchange", true)
+		case "sort_column_30d_change":
+			fn = ct.sortfn("30dchange", true)	
+		case "sort_column_1y_change":
+			fn = ct.sortfn("1ychange", true)						
 		case "sort_column_available_supply":
 			fn = ct.sortfn("availablesupply", true)
 		case "toggle_row_chart":

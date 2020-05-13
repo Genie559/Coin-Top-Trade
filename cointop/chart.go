@@ -6,9 +6,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/miguelmota/cointop/cointop/common/filecache"
-	"github.com/miguelmota/cointop/cointop/common/gizak/termui"
-	"github.com/miguelmota/cointop/cointop/common/timeutil"
+	"github.com/cdyfng/coind/cointop/common/filecache"
+	"github.com/cdyfng/coind/cointop/common/gizak/termui"
+	"github.com/cdyfng/coind/cointop/common/timeutil"
 )
 
 // ChartView is structure for chart view

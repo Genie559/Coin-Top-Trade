@@ -5,7 +5,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/miguelmota/cointop/cointop/common/filecache"
+	"github.com/cdyfng/coind/cointop/common/filecache"
 )
 
 // CacheKey returns cached value given key

@@ -9,8 +9,8 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/miguelmota/cointop/cointop/api/coingecko/format"
-	"github.com/miguelmota/cointop/cointop/api/coingecko/v3/types"
+	"github.com/cdyfng/coind/cointop/api/coingecko/format"
+	"github.com/cdyfng/coind/cointop/api/coingecko/v3/types"
 )
 
 var baseURL = "https://api.coingecko.com/api/v3"

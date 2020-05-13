@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/miguelmota/cointop/cointop/common/pad"
+	"github.com/cdyfng/coind/cointop/common/pad"
 )
 
 // HelpView is structure for help view

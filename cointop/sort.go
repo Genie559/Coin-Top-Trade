@@ -56,6 +56,10 @@ func (ct *Cointop) sort(sortBy string, desc bool, list []*Coin, renderHeaders bo
 			return a.PercentChange24H < b.PercentChange24H
 		case "7dchange":
 			return a.PercentChange7D < b.PercentChange7D
+		case "30dchange":
+			return a.PercentChange30D < b.PercentChange30D
+		case "1ychange":
+			return a.PercentChange1Y < b.PercentChange1Y
 		case "totalsupply":
 			return a.TotalSupply < b.TotalSupply
 		case "availablesupply":

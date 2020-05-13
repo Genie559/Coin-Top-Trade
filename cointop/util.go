@@ -8,7 +8,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/miguelmota/cointop/cointop/common/open"
+	"github.com/cdyfng/coind/cointop/common/open"
 )
 
 // OpenLink opens the url in a browser

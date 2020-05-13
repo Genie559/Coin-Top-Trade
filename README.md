@@ -8,6 +8,7 @@
 
 # cointop
 
+> fork from https://github.com/miguelmota/cointop & make some changes
 > Coin tracking for hackers
 
 [![License](http://img.shields.io/badge/license-Apache-blue.svg)](https://raw.githubusercontent.com/miguelmota/cointop/master/LICENSE)

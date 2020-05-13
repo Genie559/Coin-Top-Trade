@@ -41,6 +41,8 @@ func (ct *Cointop) UpdateTableHeader() {
 		"1hchange":        &t{baseColor, "[1]H%", 5, 0, " "},
 		"24hchange":       &t{baseColor, "[2]4H%", 3, 0, " "},
 		"7dchange":        &t{baseColor, "[7]D%", 4, 0, " "},
+		"30dchange":       &t{baseColor, "[3]0D%", 3, 0, " "},
+		"1ychange":        &t{baseColor, "1[Y]%", 4, 0, " "},
 		"totalsupply":     &t{baseColor, "[t]otal supply", 7, 0, " "},
 		"availablesupply": &t{baseColor, "[a]vailable supply", 0, 0, " "},
 		"percentholdings": &t{baseColor, "%holdings", 2, 0, " "},
@@ -65,7 +67,7 @@ func (ct *Cointop) UpdateTableHeader() {
 	} else {
 		cols = []string{"rank", "name", "symbol", "price",
 			"marketcap", "24hvolume", "1hchange", "24hchange",
-			"7dchange", "totalsupply", "availablesupply", "lastupdated"}
+			"7dchange", "30dchange", "1ychange", "totalsupply", "availablesupply", "lastupdated"}
 	}
 
 	var headers []string

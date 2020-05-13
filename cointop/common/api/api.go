@@ -1,8 +1,8 @@
 package api
 
 import (
-	cg "github.com/miguelmota/cointop/cointop/common/api/impl/coingecko"
-	cmc "github.com/miguelmota/cointop/cointop/common/api/impl/coinmarketcap"
+	cg "github.com/cdyfng/coind/cointop/common/api/impl/coingecko"
+	cmc "github.com/cdyfng/coind/cointop/common/api/impl/coinmarketcap"
 )
 
 // NewCMC new CoinMarketCap API

@@ -9,12 +9,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/miguelmota/cointop/cointop/common/api"
-	"github.com/miguelmota/cointop/cointop/common/api/types"
-	"github.com/miguelmota/cointop/cointop/common/filecache"
-	"github.com/miguelmota/cointop/cointop/common/gizak/termui"
-	"github.com/miguelmota/cointop/cointop/common/humanize"
-	"github.com/miguelmota/cointop/cointop/common/table"
+	"github.com/cdyfng/coind/cointop/common/api"
+	"github.com/cdyfng/coind/cointop/common/api/types"
+	"github.com/cdyfng/coind/cointop/common/filecache"
+	"github.com/cdyfng/coind/cointop/common/gizak/termui"
+	"github.com/cdyfng/coind/cointop/common/humanize"
+	"github.com/cdyfng/coind/cointop/common/table"
 	"github.com/miguelmota/gocui"
 	"github.com/patrickmn/go-cache"
 )
@@ -158,7 +158,7 @@ func NewCointop(config *Config) (*Cointop, error) {
 		apiChoice:      CoinGecko,
 		apiKeys:        new(APIKeys),
 		forceRefresh:   make(chan bool),
-		maxTableWidth:  175,
+		maxTableWidth:  200,
 		ActionsMap:     ActionsMap(),
 		cache:          cache.New(1*time.Minute, 2*time.Minute),
 		configFilepath: configFilepath,

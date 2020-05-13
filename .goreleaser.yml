@@ -1,5 +1,5 @@
 builds:
-  - binary: cointop
+  - binary: coind
     goos:
       - windows
       - darwin
@@ -7,4 +7,4 @@ builds:
     goarch:
       - amd64
     ldflags:
-     - -X github.com/miguelmota/cointop/cointop.version={{.Env.VERSION}}
+     - -X github.com/cdyfng/coind/coind.version={{.Env.VERSION}}

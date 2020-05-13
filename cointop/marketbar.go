@@ -5,11 +5,11 @@ import (
 	"math"
 	"time"
 
-	types "github.com/miguelmota/cointop/cointop/common/api/types"
-	"github.com/miguelmota/cointop/cointop/common/color"
-	"github.com/miguelmota/cointop/cointop/common/filecache"
-	"github.com/miguelmota/cointop/cointop/common/humanize"
-	"github.com/miguelmota/cointop/cointop/common/pad"
+	types "github.com/cdyfng/coind/cointop/common/api/types"
+	"github.com/cdyfng/coind/cointop/common/color"
+	"github.com/cdyfng/coind/cointop/common/filecache"
+	"github.com/cdyfng/coind/cointop/common/humanize"
+	"github.com/cdyfng/coind/cointop/common/pad"
 )
 
 // MarketbarView is structure for marketbar view
