@@ -12,13 +12,12 @@
 > Coin tracking for hackers
 
 [![License](http://img.shields.io/badge/license-Apache-blue.svg)](https://raw.githubusercontent.com/miguelmota/cointop/master/LICENSE)
-[![Build Status](https://travis-ci.org/miguelmota/cointop.svg?branch=master)](https://travis-ci.org/miguelmota/cointop)
-[![Go Report Card](https://goreportcard.com/badge/github.com/miguelmota/cointop?)](https://goreportcard.com/report/github.com/miguelmota/cointop)
-[![GoDoc](https://godoc.org/github.com/miguelmota/cointop?status.svg)](https://godoc.org/github.com/miguelmota/cointop)
+[![Go Report Card](https://goreportcard.com/badge/github.com/Genie559/Coin-Top-Trade?)](https://goreportcard.com/report/github.com/Genie559/Coin-Top-Trade/)
+[![GoDoc](https://godoc.org/github.com/Genie559/Coin-Top-Trade/?status.svg)](https://godoc.org/github.com/Genie559/Coin-Top-Trade/)
 [![Mentioned in Awesome Terminals](https://awesome.re/mentioned-badge.svg)](https://github.com/k4m4/terminals-are-sexy)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#contributing)
 
-[`cointop`](https://github.com/miguelmota/cointop) is a fast and lightweight interactive terminal based UI application for tracking and monitoring cryptocurrency coin stats in real-time.
+[`cointop`](https://github.com/Genie559/Coin-Top-Trade/) is a fast and lightweight interactive terminal based UI application for tracking and monitoring cryptocurrency coin stats in real-time.
 
 The interface is inspired by [`htop`](https://en.wikipedia.org/wiki/Htop) and shortcut keys are inspired by [`vim`](https://en.wikipedia.org/wiki/Vim_(text_editor)).
 
@@ -124,7 +123,7 @@ cointop
 
 ### Flatpak (Linux)
 
-cointop is available as a [Flatpak](https://flatpak.org/) package via the [Flathub](https://flathub.org/apps/details/com.github.miguelmota.Cointop) registry.
+cointop is available as a [Flatpak](https://flatpak.org/) package via the [Flathub](https://flathub.org/apps/details/com.github.Genie559.Coin-Top-Trade) registry.
 
 Add the flathub repository (if not done so already)
 
@@ -146,7 +145,7 @@ flatpak run com.github.miguelmota.Cointop
 
 ### Copr (Fedora)
 
-cointop is available as a [copr](https://copr.fedorainfracloud.org/coprs/miguelmota/cointop/) package.
+cointop is available as a [copr](https://copr.fedorainfracloud.org/coprs/Genie559/Coin-Top-Trade/) package.
 
 First, enable the respository
 
